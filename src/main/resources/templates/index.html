@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+
+    <title>Spring Boot - Get Comments</title>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+    <body>
+        <div th:each="comment : ${commentList}" style="border: 1px solid #333;margin: 5px;width:500px;">
+            <p th:text="${comment.comment}"></p>
+            <p style="text-align: right" th:utext="'Write by '+${comment.author}"></p>
+        </div>
+
+        <form action="#" th:action="@{/}" th:object="${formComment}" method="post">
+            <div>
+                Comment : <input type="text" th:field="*{comment}" /><br />
+                <ul th:if="${#fields.hasErrors('comment')}">
+                    <li th:each="err : ${#fields.errors('comment')}" th:text="${err}">Input is incorrect</li>
+                </ul>
+                Author : <input type="text" th:field="*{author}" /><br />
+                <ul th:if="${#fields.hasErrors('author')}">
+                    <li th:each="err : ${#fields.errors('author')}" th:text="${err}">Input is incorrect</li>
+                </ul>
+                <input type="submit" value="Save" />
+            </div>
+        </form>
+    </body>
+
+</html>
