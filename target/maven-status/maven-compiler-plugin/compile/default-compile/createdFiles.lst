@@ -1,0 +1,14 @@
+com\codegag\springboot\handler\MethodArgumentNotValidExceptionHandler.class
+com\codegag\springboot\controller\IndexRestController.class
+com\codegag\springboot\repository\UserDetailsRepository.class
+com\codegag\springboot\config\WebMvcConfig.class
+com\codegag\springboot\domain\Comment.class
+com\codegag\springboot\config\WebSecurityConfig.class
+com\codegag\springboot\controller\IndexController.class
+com\codegag\springboot\validate\StartWithConstraintValidator.class
+com\codegag\springboot\validate\StartWith.class
+com\codegag\springboot\service\UserDetailsService.class
+com\codegag\springboot\repository\CommentRepository.class
+com\codegag\springboot\Application.class
+com\codegag\springboot\domain\UserDetails.class
+com\codegag\springboot\service\CommentService.class
